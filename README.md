@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# React Hello World (Dockerized)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a simple React “Hello World” application created for the class intro assignment. The original Create React App starter code was removed and replaced with a custom styled Hello World user interface. The application is containerized using Docker.
 
-## Available Scripts
+# Tech Stack
+React (Create React App)
+Docker
+Git & GitHub
 
-In the project directory, you can run:
+# Dependencies
+Make sure the following are installed on your system:
 
-### `npm start`
+Node.js & npm  
+Docker  
+Git
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Installation
+Clone your forked repository and navigate into the project directory:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+git clone <your-repository-ssh-url>
+cd classIntro
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Install project dependencies:
 
-### `npm run build`
+npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Run Locally (Without Docker)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Start the React development server:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+npm start
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Open the application in your browser:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+http://localhost:3000
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Run with Docker
+Build the Docker image:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+docker build -t hello-world-react .
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Run the Docker container:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+docker run --rm -p 3000:3000 hello-world-react
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Open the application in your browser:
 
-### Analyzing the Bundle Size
+http://localhost:3000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Project Structure
 
-### Making a Progressive Web App
+src/App.js – main Hello World React component
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+src/App.css – styling for the application
 
-### Advanced Configuration
+Dockerfile – Docker configuration file
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+.dockerignore – excludes unnecessary files from Docker builds
 
-### Deployment
+# Submission Materials
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Screenshot of a successful git push to the forked repository
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Screen share / demo of the working Dockerized React application
